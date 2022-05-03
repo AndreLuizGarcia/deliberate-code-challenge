@@ -423,7 +423,11 @@ describe('AutoCompleteSearchBar', () => {
   })
 
   it('should call getSuggestions after 1500ms with searchValue empty', () => {
+    const setSuggestionsMock = jest.fn()
     jest.spyOn(React, 'useState').mockImplementationOnce(() => ['', jest.fn()])
+    jest
+      .spyOn(React, 'useState')
+      .mockImplementationOnce(() => [[], setSuggestionsMock])
 
     jest.useFakeTimers()
 
@@ -432,8 +436,10 @@ describe('AutoCompleteSearchBar', () => {
       cleanupFunc = func()
     })
 
-    const wrapper = shallow(<AutoCompleteSearchBar />)
+    shallow(<AutoCompleteSearchBar />)
     jest.advanceTimersByTime(2000)
+
+    expect(setSuggestionsMock).toBeCalled()
   })
 
   it('should call getSuggestions after 1500ms with searchValue filled', () => {

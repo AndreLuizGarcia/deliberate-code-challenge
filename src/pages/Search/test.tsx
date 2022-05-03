@@ -696,13 +696,15 @@ describe('Search', () => {
         TranslationId: '19'
       }
     ]
+    const setSearchParam = jest.fn()
+
     ;(useSearchParams as jest.Mock).mockReturnValueOnce([
       {
         get: (param: string) => {
           return null
         }
       },
-      jest.fn()
+      setSearchParam
     ])
 
     jest
@@ -722,6 +724,8 @@ describe('Search', () => {
 
     input.simulate('change', { target: { checked: true } })
     input.simulate('change', { target: { checked: false } })
+
+    expect(setSearchParam).toHaveBeenCalledTimes(2)
   })
 
   it('should call onChange event when checkbox is clicked with categoryId', () => {
@@ -993,13 +997,15 @@ describe('Search', () => {
       }
     ]
 
+    const setSearchParam = jest.fn()
+
     ;(useSearchParams as jest.Mock).mockReturnValueOnce([
       {
         get: (param: string) => {
           if (param === 'categoryId') return '15'
         }
       },
-      jest.fn()
+      setSearchParam
     ])
 
     jest
@@ -1018,5 +1024,6 @@ describe('Search', () => {
     const input = wrapper.find('input').at(0)
 
     input.simulate('change', { target: { checked: true } })
+    expect(setSearchParam).toHaveBeenCalled()
   })
 })
