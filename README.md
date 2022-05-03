@@ -2,7 +2,7 @@
  * https://deliberate-code-challenge.vercel.app
 
 ## 🎉 Preview
-![](/blob/homepage.png)
+![](/.blob/homepage.png)
 
 ## 🚀 Want to run? Important Commands to help you
   * npm run start - To run the project in development mode
