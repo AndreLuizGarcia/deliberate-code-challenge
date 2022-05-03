@@ -1,46 +1,36 @@
-# Getting Started with Create React App
+## 🥳 You can check this project online here
+ * https://deliberate-code-challenge.vercel.app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🎉 Preview
+![](/blob/homepage.png)
 
-## Available Scripts
+## 🚀 Want to run? Important Commands to help you
+  * npm run start - To run the project in development mode
+  * npm run test - To run the unit tests
 
-In the project directory, you can run:
+  If you are using yarn, it's simple:
+  * yarn start - To run the project in development mode
+  * yarn test - To run the unit tests
 
-### `yarn start`
+## ☕ React Coding Challenge
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This repositorie it's a coding challenge that was suggested by Deliberate.ai
+The instructions are based [here](https://gitlab.com/join-deliberate/frontend-challenge)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## What was used in this project?
 
-### `yarn test`
+This project was developed with React library, have unit tests and is integrated (manually for now) with [Snyk.io](https://snyk.io/) to check vulnerabilities.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Next steps and considerations
 
-### `yarn build`
+For this project be more awesome than it already is we can follow some roadmap like this:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [ ] Improve layout to offer a better user experiencie (lol)
+- [ ] Implement a skeleton component to use when the requests are beeing done to offer a better feedback to the user
+- [ ] Implement better logs, notifications and feedback to the user when something went wrong
+- [ ] The API doesn't have pagination, so to offer a better experience to the user maybe it's a possibility do this in the frontend
+- [ ] Section part of API response has a content with HTML. It's necessary to understand better the patterns that HTML tags it's beeing receive to style it in a better way
+- [ ] Improve unit tests to get 100% of coverage. - Today is almost there
+- [ ] Implement E2E tests. A suggestion is use [Cypress](https://www.cypress.io/) to implement this kind of test.
+- [ ] If the number of generic components grow or maybe if the project will have a design system it's nice to document this design system with [Storybook](https://storybook.js.org/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
